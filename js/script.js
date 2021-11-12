@@ -20,7 +20,7 @@ var app = new Vue({
       toDoString: '',
         status: 'active'
     },
-    newToDoString: ' ',
+    newToDoString: '',
     error: false,
 
   },
