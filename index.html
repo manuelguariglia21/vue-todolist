@@ -40,10 +40,10 @@
             
             <li>
 
-              <div class="item" v-for="(item, index) in toDoList">
+              <div class="item" v-for="(item, index) in toDoList" @click="isActive(item)">
 
                 <span
-                @click()
+                
                 :class="{'disable': item.status === 'disable'}"
                 >
                 {{item.toDoString}}

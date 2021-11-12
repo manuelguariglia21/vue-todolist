@@ -47,6 +47,19 @@ var app = new Vue({
         toDoString: '',
         status: 'active'
       }
+    },
+    
+    isActive(item){
+        if(item.status === 'disable'){
+          item.status = 'active';
+        }
+        else item.status = 'disable';
     }
+
+
+
+
   }
+
+  
 })
