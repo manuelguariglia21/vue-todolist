@@ -32,6 +32,7 @@ main .mg-container{
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 200px;
 }
 
 .list ul{
@@ -43,7 +44,7 @@ main .mg-container{
   color: #041836;
 }
 
-.list p span{
+.list .item span{
   padding-right: 15px;
 }
 
@@ -54,12 +55,12 @@ main .mg-container{
   margin: 5px 0;
 }
 
-.list ul li p{
+.list ul li .item{
   cursor: pointer;
   margin-bottom: 0;
 }
 
-.list p span.disable{
+.list .item span.disable{
   text-decoration-line: line-through; 
   color: #7DABBF;
 }

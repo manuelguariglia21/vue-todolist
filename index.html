@@ -25,26 +25,32 @@
 
       <section class="mg-container">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Aggiungi..." aria-label="Username" aria-describedby="basic-addon1">
+          <input
+            v-model="newToDoString"
+            type="text" class="form-control"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          >
         </div>
         
         <div class="list">
           <ul>
             
             <li>
-              <p>
-                <span class="disable">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
-                <i class="fas fa-trash"></i>
-              </p>
-              <div class="line"></div>
-            </li>
 
-            <li>
-              <p>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+              <div class="item" v-for = "(item, index) of toDoList">
+
+                <span
+                @click()
+                :class="{'disable': item.status === 'disable'}"
+                >
+                {{item.toDoString}}
+                </span>
+
                 <i class="fas fa-trash"></i>
-              </p>
-              <div class="line"></div>
+                <div class="line"></div>
+              </div>
+
             </li>
 
           </ul>
