@@ -24,9 +24,11 @@
     <main>
 
       <section class="mg-container">
+        <h4 v-if="error">Inserire un testo di almeno 3 caratteri</h4>
         <div class="input-group mb-3">
           <input
             v-model="newToDoString"
+            @keyup.enter="insertToDo"
             type="text" class="form-control"
             aria-label="Username"
             aria-describedby="basic-addon1"
@@ -38,7 +40,7 @@
             
             <li>
 
-              <div class="item" v-for = "(item, index) of toDoList">
+              <div class="item" v-for="(item, index) in toDoList">
 
                 <span
                 @click()
@@ -47,7 +49,7 @@
                 {{item.toDoString}}
                 </span>
 
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-trash" @click="removeItem(index)"></i>
                 <div class="line"></div>
               </div>
 
