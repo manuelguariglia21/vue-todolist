@@ -9,6 +9,57 @@ header{
 }
 
 main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #041836;
   height: calc(100vh - 90px);
+  overflow: auto;
+}
+
+main .mg-container{
+  width: 50%;
+}
+
+.form-control{
+  border-radius: 10px 10px 0 0;
+}
+
+.list{
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list ul{
+  padding: 5px;
+}
+
+.list ul li{
+  list-style: none;
+  color: #041836;
+}
+
+.list p span{
+  padding-right: 15px;
+}
+
+.list ul li .line{
+  height: 2px;
+  width: 100%;
+  background-color: #04E166;
+  margin: 5px 0;
+}
+
+.list ul li p{
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.list p span.disable{
+  text-decoration-line: line-through; 
+  color: #7DABBF;
 }
